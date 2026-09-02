@@ -15,11 +15,11 @@ for i in range(n):
 freq1 = Counter(nums1)
 freq2 = Counter(nums2)
 
-intersection_number = freq1 & freq2
+intersection_number = freq1 & freq2 
 result = list(intersection_number.elements())
 print(result)
 
-#Time: O(m + n + k)  ,  Space: O(m + n) in the worst case.
+#Time: O(m + n + k)  ,  Space: O(m + n) in the worst case in above code the S.C can be optimized
 
 
 

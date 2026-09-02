@@ -14,38 +14,45 @@
 # nums1 += nums2
 # nums1.sort()
 
-# this above solution is good but it has T.C = O(m+nlog(m+n))  and it can be O(m+n)
+# this above solution is very bad , it has T.C = O(m+nlog(m+n))  and it can be O(m+n)
 
 m = int(input())
-n = int(input())
 
 nums1 = []
-for _ in range(m):
+for i in range(m):
     nums1.append(int(input()))
 
+n = int(input())
+
 nums2 = []
-for _ in range(n):
+for i in range(n):
     nums2.append(int(input()))
 
-result = []
+# Add empty spaces to nums1
+nums1 += [0] * n
 
-i = 0
-j = 0
+# Three pointers
+i = m - 1
+j = n - 1
+k = m + n - 1
 
-while i < m and j < n:
-    if nums1[i] <= nums2[j]:
-        result.append(nums1[i])
-        i += 1
+# Merge from the back
+while i >= 0 and j >= 0:
+    if nums1[i] > nums2[j]:
+        nums1[k] = nums1[i]
+        i -= 1
     else:
-        result.append(nums2[j])
-        j += 1
+        nums1[k] = nums2[j]
+        j -= 1
 
-while i < m:
-    result.append(nums1[i])
-    i += 1
+    k -= 1
 
-while j < n:
-    result.append(nums2[j])
-    j += 1
+# If elements are remaining in nums2
+while j >= 0:
+    nums1[k] = nums2[j]
+    j -= 1
+    k -= 1
 
-print(*result)
+print(nums1)
+
+# its two pointer method and most optimized cuz T.C = O(M+N) and S.C = (1)

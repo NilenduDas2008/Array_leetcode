@@ -3,7 +3,7 @@ from collections import Counter
 m = int(input())
 nums1 = []
 for i in range(m):
-    value1  = int(input())
+    value1 = int(input())
     nums1.append(value1)
 
 n = int(input())

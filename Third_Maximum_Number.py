@@ -35,3 +35,5 @@ if max3 == float('-inf'):
     print(max1)
 else:
     print(max3)
+
+# final code with T.C: O(N)

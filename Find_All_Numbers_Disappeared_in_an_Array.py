@@ -1,14 +1,23 @@
-n = int(input())
-nums = []
+# n = int(input())
+# nums = []
+# for _ in range(n):
+#     num = int(input())
+#     nums.append(num)  
 
-for _ in range(n):
-    num = int(input())
-    nums.append(num)  
+# arr = list(range(1,n+1))
 
-arr = list(range(1,n+1))
-
-nums_set = set(nums)
-result = [x for x in arr if x not in nums_set]
-print(result)
+# nums_set = set(nums)
+# result = [x for x in arr if x not in nums_set]
+# print(result)
 
 # Time Complexity: O(n) ;  Space Complexity: O(n)
+
+n = int(input())
+nums = []
+for _ in range(n):
+    num = int(input())
+    nums.append(num)
+
+real_sum = (n*(n+1))//2
+nums_sum = sum(nums)
+difference = real_sum - nums_sum

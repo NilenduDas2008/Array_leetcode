@@ -53,6 +53,6 @@ def subarraySum(nums, k):
 
         prefix_freq[prefix_sum] = prefix_freq.get(prefix_sum, 0) + 1
 
-    return count
+    return count 
 
 # best approach using hashing and prefix sum both . T.C: O(N) and S.C: O(N)

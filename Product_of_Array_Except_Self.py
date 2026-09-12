@@ -17,7 +17,7 @@ right_prod = 1
 result = [1]*len(nums)
 
 for i in range(len(nums)):
-    result[i]   = left_prod
+    result[i] = left_prod
     left_prod *= nums[i]
 
 for i in range(len(nums)-1, -1, -1):
@@ -25,5 +25,4 @@ for i in range(len(nums)-1, -1, -1):
     right_prod *= nums[i]
 print(result)
 
-# O(N) time
-# O(N) space
+# O(N) time ; O(N) space

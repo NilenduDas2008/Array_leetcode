@@ -1,13 +1,19 @@
 from collections import Counter
-n = int(input())
-nums = Counter([0]*n)
 
-for _ in range(len(nums)):
+n = int(input())
+nums = []
+
+for _ in range(n):
     value = int(input())
     nums.append(value)
-# for key, count in nums.items():
+
+# frequency = Counter(nums)
+
+# for num, count in frequency.items():
 #     if count == 1:
-#         print(key) : this solution is good Time : O(N)  ; Space : O(N) the space can be optimised 
+#         print(num)
+#         break
+# this solution is good Time : O(N)  ; Space : O(N) the space can be optimised 
 
 ans = 0
 for num in nums:
